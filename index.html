@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>კალკულატორი</title>
+</head>
+<body>
+    <script>
+        let operator;
+        let number1;
+        let number2;
+        let result;
+
+
+
+        function isNumeric(value) {
+            return !isNaN(parseFloat(value)) && isFinite(value); }
+
+
+            number1 = prompt('ჩაწერეთ პირველი რიცხვი');
+        if (number1 === null) {
+            alert('გემშვიდობებით');
+        } else if (!isNumeric(number1)) {
+            alert('გამოიყენეთ რიცხვი.');
+        } else {
+            number1 = parseFloat(number1);
+
+
+
+            number2 = prompt('ჩაწერეთ მეორე რიცხვი');
+            if (number2 === null) {
+                alert('გემშვიდობებით');
+            } else if (!isNumeric(number2)) {
+                alert('გამოიყენეთ რიცხვები');
+            } else {
+                number2 = parseFloat(number2);
+
+
+
+
+                operator = prompt('ამოირჩიეთ მოქმედება (+,-,*,/)');
+                if (operator === null) {
+                    alert('გემშვიდობებით');
+                } else if (!['+', '-', '*', '/'].includes(operator)) {
+                    alert('აირჩიეთ ერთ-ერთი მოქმედება (+,-,*,/).');
+                } else {   
+                    if (operator === '+') {
+                        result = number1 + number2;
+                    } else if (operator === '-') {
+                        result = number1 - number2;
+                    } else if (operator === '*') {
+                        result = number1 * number2;
+                    } else if (operator === '/') {
+                        result = number1 / number2;
+                    } else {
+                        alert('გამოიყენეთ მოქმედება');
+                    }
+                    if (result !== undefined) {
+                        alert(result);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
